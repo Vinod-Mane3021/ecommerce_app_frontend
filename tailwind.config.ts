@@ -15,6 +15,9 @@ const config: Config = {
       fontFamily: {
         fontPoppins: 'Poppins',
         fontJetBrains: 'JetBrains'
+      },
+      colors: {
+        darkBlack: "#292929"
       }
       
     },

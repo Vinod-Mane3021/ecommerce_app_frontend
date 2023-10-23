@@ -6,13 +6,13 @@ const Banner = () => {
   return (
     <div className="relative hover:cursor-pointer">
       {/* image */}
-      
+
       <div className="flex items-center justify-center overflow-x-hidden xl:flex-none xl:mx-0">
         <img
           className="h-[500px] xl:h-full min-w-fit xl:min-w-full"
           src="/images/homePage/BigImages/homeImg.png"
           alt="home-page-image"
-          />
+        />
       </div>
       <div className="absolute bottom-5 md:bottom-20 left-5 md:left-20 flex flex-col gap-2">
         <h1 className="text-white font-bold text-4xl md:text-5xl">
@@ -22,21 +22,19 @@ const Banner = () => {
 
         <div className="flex flex-col md:flex-row gap-3 md:gap-5 text-sm py-4">
           <Link href="/sale">
-            <FeatureHoverButton
-              bgColor="white"
-              hoverBgColor="[#292929]"
-              hoverTextColor="white"
-              text="Shop 25% Off"
-            />
+            <button
+              className={`bg-white px-7 py-3 rounded-full hover:bg-darkBlack hover:text-white hover:duration-300`}
+            >
+              Shop 25% Off
+            </button>
           </Link>
 
           <Link href="/sale">
-            <FeatureHoverButton
-              bgColor="white"
-              hoverBgColor="[#292929]"
-              hoverTextColor="white"
-              text="Shop New Markdowns"
-            />
+            <button
+              className={`bg-white px-7 py-3 rounded-full hover:bg-darkBlack hover:text-white hover:duration-300`}
+            >
+              Shop New Markdowns
+            </button>
           </Link>
         </div>
       </div>

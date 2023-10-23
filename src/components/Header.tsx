@@ -23,14 +23,11 @@ const Header = () => {
         </div>
         <div className="h-full flex flex-row items-center justify-center gap-2">
           {/* location */}
-          <LocationIcon height="26px" width="26px" />
+          <LocationIcon height="24px" width="24px" />
           {/* favorite icon */}
-          <FavoriteIcon height="26px" width="26px"/>
+          <FavoriteIcon height="24px" width="24px" />
           {/* profile icon */}
-          <ProfileIcon 
-            height="26px"
-            width="26px"
-          />
+          <ProfileIcon height="24px" width="24px" />
           {/* divider */}
           <div className="w-[0.85px] h-[30%] bg-gray-400"></div>
           <CartIcon />

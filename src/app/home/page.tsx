@@ -3,10 +3,11 @@ import NavBar from "@/components/navBar/NavBar";
 import React from "react";
 import image from "../../../public/images/HomePage/homePageImg.png";
 import Link from "next/link";
-import Banner from "./Banner";
-import LacosteEssentials from "./LacosteEssentials";
-import LacosteBandier from "./LacosteBandier";
-import Bestsellers from "./Bestsellers";
+import Banner from "../../components/home/Banner";
+import LacosteEssentials from "../../components/home/LacosteEssentials";
+import LacosteBandier from "../../components/home/LacosteBandier";
+import Bestsellers from "../../components/home/Bestsellers";
+import NowTrending from "@/components/home/NowTrending";
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
       <LacosteEssentials/>
       <LacosteBandier/>
       <Bestsellers/>
+      <NowTrending/>
     </div>
   );
 };
