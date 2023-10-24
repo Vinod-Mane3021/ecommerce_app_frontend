@@ -9,7 +9,7 @@ const ImageCategory = ({ id, image, name, route }: ImageDataProps ) => {
       className="flex flex-col gap-2 hover:cursor-pointer hover:underline"
     >
       <img className="h-48" src={image} alt="category image" />
-      <p className="text-black font-bold">{name}</p>
+      <p className="text-darkGray font-bold">{name}</p>
     </Link>
   );
 };

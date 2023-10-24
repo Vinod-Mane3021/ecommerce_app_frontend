@@ -1,8 +1,8 @@
 import React from "react";
-import ContactUsIcon from "../icons/ContactUsIcon";
-import FreeReturn from "../icons/FreeReturnIcon";
-import SecurePayment from "../icons/SecurePayment";
-import ShippingIcon from "../icons/ShippingIcon";
+import ContactUsIcon from "../icons/ecommerce/ContactUsIcon";
+import FreeReturn from "../icons/other/FreeReturnIcon";
+import SecurePayment from "../icons/ecommerce/SecurePayment";
+import ShippingIcon from "../icons/ecommerce/ShippingIcon";
 
 const Support = () => {
   return (

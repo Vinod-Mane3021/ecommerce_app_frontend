@@ -1,7 +1,7 @@
 'use client'
 import AddToCartButton from "@/components/buttons/AddToCartButton";
 import DiscountOfferBox from "@/components/home/DiscountOfferBox";
-import FilledFavoriteIcon from "@/components/icons/FilledFavoriteIcon";
+import FilledFavoriteIcon from "@/components/icons/other/FilledFavoriteIcon";
 import FavoriteSvg from "@/utilities/svgIcons/FavoriteSvg";
 import { BestsellersProps } from "@/utilities/types/bestsellersTypes";
 import Link from "next/link";

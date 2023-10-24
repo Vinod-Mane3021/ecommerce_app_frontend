@@ -1,6 +1,6 @@
 import React from "react";
-import ArrowRightIcon from "../icons/ArrowRightIcon";
-import ArrowLeftIcon from "../icons/ArrowLeftIcon";
+import ArrowRightIcon from "../icons/arrow/ArrowRightIcon";
+import ArrowLeftIcon from "../icons/arrow/ArrowLeftIcon";
 
 const LacosteInside = () => {
   return (
@@ -12,7 +12,7 @@ const LacosteInside = () => {
           <p className="text-xl md:text-2xl font-bold">Lacoste Inside</p>
           <img
             className="w-12 md:w-16"
-            src="/images/logoBlack&White.png"
+            src="/images/logodarkGray&White.png"
             alt=""
           />
         </div>
@@ -30,7 +30,7 @@ const LacosteInside = () => {
       </div>
 
       {/* Bottom content */}
-      <div className="flex flex-col overflow-x-hidden md:flex-row items-end md:justify-normal px-0 md:px-8 lg:px-16 gap-14">
+      <div className="flex flex-col overflow-x-hidden md:flex-row items-center md:items-end md:justify-normal px-0 md:px-8 lg:px-16 gap-14">
         {/* bottom video */}
 
         {/* <video
@@ -42,7 +42,7 @@ const LacosteInside = () => {
 
         <video
         controls loop autoPlay muted
-        className="h-[300px] md:h-[310px] lg:h-[450px] xl:h-[550px] min-w-fit hover:cursor-pointer"
+        className="h-[300px] md:h-[320px] lg:h-[450px] xl:h-[550px] min-w-fit hover:cursor-pointer"
         >
           <source src="/images/homePage/LacosteInside/BRAND_BLOC_DESK _MEN.webm" />
           Your browser does not support the video tag.

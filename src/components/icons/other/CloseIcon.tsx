@@ -7,7 +7,7 @@ interface Props {
 }
 
 const CloseIcon = () => {
-    // const [color, setColor] = useState('black')
+    // const [color, setColor] = useState('darkGray')
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +18,7 @@ const CloseIcon = () => {
       color='#383b47'
       className={`w-7 h-7`}
       // onMouseEnter={() => setColor('red')}
-      // onMouseLeave={() => setColor('black')}
+      // onMouseLeave={() => setColor('darkGray')}
     >
       <path
         strokeLinecap="round"

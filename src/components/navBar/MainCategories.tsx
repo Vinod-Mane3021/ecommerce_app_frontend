@@ -1,7 +1,7 @@
 import { Popover, Transition } from "@headlessui/react";
 import React, { Fragment } from "react";
 import Sections from "./CategoriesSection";
-import CloseIcon from "../icons/CloseIcon";
+import CloseIcon from "../icons/other/CloseIcon";
 import ImageCategory from "./ImageCategory";
 import { CategoryProps, ImageDataProps, SectionsProps } from "@/utilities/types/navBarTypes";
 import CategoriesSection from "./CategoriesSection";

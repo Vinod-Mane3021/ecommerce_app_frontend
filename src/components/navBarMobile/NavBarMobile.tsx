@@ -3,14 +3,14 @@ import React, { Fragment, SetStateAction, useEffect, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import { navigation } from "../../utilities/navBarData/categoryData";
 import Link from "next/link";
-import ArrowRightIcon from "../icons/ArrowRightIcon";
+import ArrowRightIcon from "../icons/arrow/ArrowRightIcon";
 import HomePageNav from "./HomePageNav";
-import ProfileIcon from "../icons/ProfileIcon";
-import LocationIcon from "../icons/LocationIcon";
-import BoxIcon from "../icons/BoxIcon";
-import FavoriteIcon from "../icons/FavoriteIcon";
+import ProfileIcon from "../icons/ecommerce/ProfileIcon";
+import LocationIcon from "../icons/ecommerce/LocationIcon";
+import BoxIcon from "../icons/other/BoxIcon";
+import FavoriteIcon from "../icons/other/FavoriteIcon";
 import FavoriteSvg from "@/utilities/svgIcons/FavoriteSvg";
-import SupportIcon from "../icons/SupportIcon";
+import SupportIcon from "../icons/other/SupportIcon";
 
 const NavBarMobile = () => {
   const isAuth = false;
@@ -22,7 +22,7 @@ const NavBarMobile = () => {
     >
       
         <Popover.Group className="px-5 flex flex-col gap-1 mb-8">
-          <p className="ml-5 py-5 text-black text-sm font-semibold">Homepage</p>
+          <p className="ml-5 py-5 text-darkGray text-sm font-semibold">Homepage</p>
           {navigation.map((category) => {
             const isNavOpen =
               category.imageData.length > 0 || category.sections.length > 0;
@@ -56,7 +56,7 @@ const NavBarMobile = () => {
             </Link>
 
             {/* Find a boutique - find store */}
-            <Link href="#" className="flex items-center justify-between hover:cursor-pointer text-black hover:text-blue-800">
+            <Link href="#" className="flex items-center justify-between hover:cursor-pointer text-darkGray hover:text-blue-800">
               <div className="flex items-center">
                 <LocationIcon height="18px" width="18px" />
                 <p className="underline">Find a boutique</p>
@@ -64,7 +64,7 @@ const NavBarMobile = () => {
             </Link>
 
             {/* Looking for a guest checkout order? */}
-            <Link href="#" className="flex items-center justify-between hover:cursor-pointer text-black hover:text-blue-800">
+            <Link href="#" className="flex items-center justify-between hover:cursor-pointer text-darkGray hover:text-blue-800">
               <div className="flex items-center gap-2 ml-2">
                 <BoxIcon />
                 <p className="underline">Looking for a guest checkout order?</p>
@@ -72,7 +72,7 @@ const NavBarMobile = () => {
             </Link>
 
             {/* Wishlist */}
-            <Link href="#" className="flex items-center justify-between hover:cursor-pointer text-black hover:text-blue-800">
+            <Link href="#" className="flex items-center justify-between hover:cursor-pointer text-darkGray hover:text-blue-800">
               <div className="flex items-center gap-2 ml-2">
                 <FavoriteSvg height="18px" width="18px" />
                 <p className="underline">Wishlist</p>
@@ -81,7 +81,7 @@ const NavBarMobile = () => {
             
 
             {/* Help & Support */}
-            <Link href="#" className="flex items-center justify-between hover:cursor-pointer text-black hover:text-blue-800">
+            <Link href="#" className="flex items-center justify-between hover:cursor-pointer text-darkGray hover:text-blue-800">
               <div className="flex items-center gap-2 ml-2">
                 <SupportIcon/>
                 <p className="underline">Help & Support</p>

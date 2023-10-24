@@ -26,14 +26,14 @@ const LacosteBandier = () => {
         <div className="flex flex-col gap-2">
             <Link href="/sale">
                 <button
-                    className={`bg-[#292929] text-sm px-7 py-3 rounded-full text-white border border-transparent hover:bg-white hover:text-black hover:border-gray-300 duration-300`}
+                    className={`bg-[#292929] text-sm px-7 py-3 rounded-full text-white border border-transparent hover:bg-white hover:text-darkGray hover:border-gray-300 duration-300`}
                     >
                     Shop Now
                 </button>
             </Link>
             <Link href="/sale">
                 <button
-                    className={`bg-[#292929] text-sm px-7 py-3 rounded-full text-white border border-transparent hover:bg-white hover:text-black hover:border-gray-300 duration-300`}
+                    className={`bg-[#292929] text-sm px-7 py-3 rounded-full text-white border border-transparent hover:bg-white hover:text-darkGray hover:border-gray-300 duration-300`}
                     >
                     Explore the Collaboration
                 </button>

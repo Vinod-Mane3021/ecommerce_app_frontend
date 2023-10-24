@@ -1,6 +1,6 @@
 import MenuIconSvg from '@/utilities/svgIcons/MenuIconSvg'
 import React from 'react'
-import CloseIcon from './CloseIcon'
+import CloseIcon from '../other/CloseIcon'
 
 const MenuIcon = () => {
   return (

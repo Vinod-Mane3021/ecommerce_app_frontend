@@ -2,9 +2,9 @@
 import { Fragment, SetStateAction, useEffect, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import { MdKeyboardArrowUp } from "react-icons/md";
-import ArrowUpIcon from "../icons/ArrowUpIcon";
-import ArrowDownIcon from "../icons/ArrowDownIcon";
-import CloseIcon from "../icons/CloseIcon";
+import ArrowUpIcon from "../icons/arrow/ArrowUpIcon";
+import ArrowDownIcon from "../icons/arrow/ArrowDownIcon";
+import CloseIcon from "../icons/other/CloseIcon";
 import { navigation } from "../../utilities/navBarData/categoryData";
 import Link from "next/link";
 import ImageCategory from "./ImageCategory";

@@ -1,5 +1,5 @@
 import React from "react";
-import ArrowRightIcon from "../icons/ArrowRightIcon";
+import ArrowRightIcon from "../icons/arrow/ArrowRightIcon";
 import Link from "next/link";
 import { Popover } from "@headlessui/react";
 

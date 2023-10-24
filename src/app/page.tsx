@@ -8,7 +8,7 @@ import HomePage from './home/page'
 
 const page = () => {
   return (
-    <main className='font-fontPoppins bg-white mb-32'>
+    <main className='font-fontPoppins bg-white'>
       <div className="fixed top-0 w-full z-20 bg-white">
           <Header />
           <div className='fixed w-full z-20 bg-white hidden lg:block'>
