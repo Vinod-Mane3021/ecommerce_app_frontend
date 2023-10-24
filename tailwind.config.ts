@@ -17,7 +17,8 @@ const config: Config = {
         fontJetBrains: 'JetBrains'
       },
       colors: {
-        darkGray: "#292929"
+        darkGray: "#292929",
+        lightGray: "#f4f4f4"
       }
       
     },

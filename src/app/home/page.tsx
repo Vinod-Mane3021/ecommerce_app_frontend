@@ -9,6 +9,7 @@ import LacosteBandier from "../../components/home/LacosteBandier";
 import Bestsellers from "../../components/home/Bestsellers";
 import NowTrending from "@/components/home/NowTrending";
 import LacosteInside from "@/components/home/LacosteInside";
+import Footer from "@/components/footer/Footer";
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
       <Bestsellers/>
       <NowTrending/>
       <LacosteInside/>
+      <Footer/>
     </div>
   );
 };

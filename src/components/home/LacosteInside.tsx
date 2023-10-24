@@ -4,7 +4,7 @@ import ArrowLeftIcon from "../icons/ArrowLeftIcon";
 
 const LacosteInside = () => {
   return (
-    <div className="w-full text-white bg-darkGray py-10 my-10 flex flex-col h-full gap-5 relative pb-20">
+    <div className="w-full text-white bg-darkGray pt-10 my-10 flex flex-col min-h-fit gap-5 relative pb-20">
       {/* Top content */}
       <div className="px-4 md:px-8 lg:px-16 w-full flex items-center justify-between">
         {/* title and logo */}
@@ -30,17 +30,34 @@ const LacosteInside = () => {
       </div>
 
       {/* Bottom content */}
-      <div className="flex flex-col overflow-x-hidden md:flex-row items-center justify-center md:justify-normal px-0 md:px-8 lg:px-16  gap-14 h-full">
+      <div className="flex flex-col overflow-x-hidden md:flex-row items-end md:justify-normal px-0 md:px-8 lg:px-16 gap-14">
         {/* bottom video */}
-        <video
+
+        {/* <video
           className="h-[300px] md:h-[310px] lg:h-[450px] xl:h-[550px] min-w-fit hover:cursor-pointer"
           controls loop autoPlay muted
           src="/images/homePage/LacosteInside/BRAND_BLOC_DESK _MEN.webm"
           typeof="video/webm"
-        ></video>
+        ></video> */}
+
+        <video
+        controls loop autoPlay muted
+        className="h-[300px] md:h-[310px] lg:h-[450px] xl:h-[550px] min-w-fit hover:cursor-pointer"
+        >
+          <source src="/images/homePage/LacosteInside/BRAND_BLOC_DESK _MEN.webm" />
+          Your browser does not support the video tag.
+        </video>
+
+
+
+        {/* <video width="320" height="240" autoPlay muted>
+          <source src="movie.mp4" type="video/mp4">
+          <source src="movie.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+        </video> */}
 
         {/* bottom right content */}
-        <div className="px-4 md:px-0 flex flex-col gap-5 min-h-fit justify-end">
+        <div className="px-4 md:px-0 flex flex-col gap-5 h-[100%] ">
           <div className="flex flex-col gap-1">
             <h2 className="text-2xl font-semibold">
               L003 Neo Sneakers: The <br />
