@@ -1,6 +1,6 @@
 
 import React from 'react'
-import LoginForm from './authentication/LogIn/page'
+import LoginForm from './authentication/logIn/page'
 import Header from '@/components/header/Header'
 import NavBar from '@/components/navBar/NavBar'
 import NavBarMobile from '@/components/navBarMobile/NavBarMobile'
