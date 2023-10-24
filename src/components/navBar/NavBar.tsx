@@ -36,8 +36,7 @@ const NavBar = () => {
       <div className="border-b border-gray-200m flex justify-center items-center h-8 pb-4">
         <Popover.Group className="lg:ml-8 lg:self-stretch flex space-x-8">
           {navigation.map((category) => {
-            const isNavOpen =
-              category.imageData.length > 0 || category.sections.length > 0;
+            const isNavOpen = category.imageData.length > 0 || category.sections.length > 0;
             return (
               <Popover key={category.id} className="flex">
                 {({ open }) => (
@@ -55,7 +54,7 @@ const NavBar = () => {
                           isNavOpen ? "block" : "hidden"
                         )}
                       >
-                        <ArrowUpIcon />
+                        <ArrowUpIcon heightWidth="16px"/>
                       </div>
                     </div>
 

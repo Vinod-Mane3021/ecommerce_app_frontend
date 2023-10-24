@@ -23,7 +23,7 @@ const Banner = () => {
         <div className="flex flex-col md:flex-row gap-3 md:gap-5 text-sm py-4">
           <Link href="/sale">
             <button
-              className={`bg-white px-7 py-3 rounded-full hover:bg-darkBlack hover:text-white hover:duration-300`}
+              className={`bg-white px-7 py-3 rounded-full hover:bg-darkGray hover:text-white hover:duration-300`}
             >
               Shop 25% Off
             </button>
@@ -31,7 +31,7 @@ const Banner = () => {
 
           <Link href="/sale">
             <button
-              className={`bg-white px-7 py-3 rounded-full hover:bg-darkBlack hover:text-white hover:duration-300`}
+              className={`bg-white px-7 py-3 rounded-full hover:bg-darkGray hover:text-white hover:duration-300`}
             >
               Shop New Markdowns
             </button>

@@ -1,12 +1,12 @@
 import React from "react";
-import SearchBar from "./SearchFeilds/SearchBar";
-import LocationIcon from "./icons/LocationIcon";
-import FavoriteIcon from "./icons/FavoriteIcon";
+import SearchBar from "../SearchFeilds/SearchBar";
+import LocationIcon from "../icons/LocationIcon";
+import FavoriteIcon from "../icons/FavoriteIcon";
 import FavoriteSvg from "@/utilities/svgIcons/FavoriteSvg";
-import ProfileIcon from "./icons/ProfileIcon";
-import CartIcon from "./icons/CartIcon";
+import ProfileIcon from "../icons/ProfileIcon";
+import CartIcon from "../icons/CartIcon";
 import Link from "next/link";
-import MenuIcon from "./icons/MenuIcon";
+import MenuIcon from "../icons/MenuIcon";
 
 const Header = () => {
   return (
@@ -23,11 +23,11 @@ const Header = () => {
         </div>
         <div className="h-full flex flex-row items-center justify-center gap-2">
           {/* location */}
-          <LocationIcon height="24px" width="24px" />
+          <LocationIcon height="25px" width="25px" />
           {/* favorite icon */}
-          <FavoriteIcon height="24px" width="24px" />
+          <FavoriteIcon height="25px" width="25px" />
           {/* profile icon */}
-          <ProfileIcon height="24px" width="24px" />
+          <ProfileIcon height="25px" width="25px" />
           {/* divider */}
           <div className="w-[0.85px] h-[30%] bg-gray-400"></div>
           <CartIcon />

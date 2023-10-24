@@ -1,14 +1,20 @@
 import React from "react";
 
-const ArrowUpIcon = () => {
+interface Props {
+  heightWidth: string
+}
+
+const ArrowUpIcon = ({ heightWidth }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      strokeWidth="1.5"
+      strokeWidth="1.2"
       stroke="currentColor"
-      className={`w-5 h-4 transition ease-in-out duration-300`}
+      height={heightWidth}
+      width={heightWidth}
+      className={`transition ease-in-out duration-300`}
     >
       <path
         strokeLinecap="round"

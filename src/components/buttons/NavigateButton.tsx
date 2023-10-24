@@ -8,7 +8,7 @@ const NavigateButton = () => {
   const [color, setColor] = useState('#000')
 
   return (
-    <button className='bg-white px-8 py-4 rounded-full hover:bg-darkBlack duration-300'
+    <button className='bg-white px-5 py-2 sm:px-6 sm:py-3 lg:px-7 lg:py-4 rounded-full border-[0.3px] border-transparent hover:border-white hover:bg-darkGray duration-300'
       onMouseEnter={() => setColor('#fff')}
       onMouseLeave={() => setColor("#000")}
       >

@@ -7,11 +7,11 @@ const Bestsellers = () => {
 
   return (
     <>
-      <p className="px-8 md:px-16 pt-8 font-bold text-2xl">
+      <p className="px-4 md:px-16 pt-8 font-bold text-2xl">
         Shop Our Bestsellers
       </p>
       <>
-        <ul className="flex flex-row overflow-x-auto px-8 md:px-16 scroll-smooth overflow-hidden gap-2 scrollbar-hide">
+        <ul className="flex flex-row overflow-x-auto px-4 md:px-16 scroll-smooth overflow-hidden gap-2 scrollbar-hide">
           {bestsellers.map((Item: BestsellersProps) => {
             return (
               <BestsellerItem

@@ -7,7 +7,7 @@ const LacosteBandier = () => {
     <div className="w-full flex flex-col md:flex-row items-center gap-10 md:gap-20 lg:gap-28 xl:gap-32 mt-8">
 
     {/* left side  flex overflow-x-hidden xl:flex-none xl:mx-0 */ }
-    <div className="flex items-center justify-center overflow-x-hidden xl:flex-none h-full md:w-[55%]">
+    <div className="flex items-center justify-center overflow-x-hidden xl:flex-none h-full md:w-[55%] hover:cursor-pointer">
 
       <img
         className="h-[500px] md:h-[450px] xl:h-full min-w-fit md:min-w-full"

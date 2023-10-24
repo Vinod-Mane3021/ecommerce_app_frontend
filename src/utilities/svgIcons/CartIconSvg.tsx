@@ -4,8 +4,8 @@ const CartIconSvg = () => {
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
-      width="24px"
-      height="24px"
+      width="25px"
+      height="25px"
       viewBox="0 0 512.000000 512.000000"
       preserveAspectRatio="xMidYMid meet"
     >

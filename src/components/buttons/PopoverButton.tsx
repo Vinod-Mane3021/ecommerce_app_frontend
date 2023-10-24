@@ -6,27 +6,25 @@ import Link from "next/link";
 import React from "react";
 
 const PopoverButton = ({ name, open, isNavOpen }: PopoverButtonProps) => {
-  return (
-    isNavOpen ? (
-      <Popover.Button
-        className={classNames(
-          open ? "text-black font-bold" : "text-gray-700 hover:text-gray-800",
-          "relative z-10 -mb-px flex items-center pt-px text-base transition-colors duration-300 ease-out"
-        )}
-        // onClick={() => open ? closePopover() : openPopover(category.id)}
-      >
+  return isNavOpen ? (
+    <Popover.Button
+      className={classNames(
+        "relative z-10 text-darkGray text-sm -mb-px flex items-center pt-px transition-colors duration-300 ease-out",
+        open ? "text-darkGray font-bold" : "text-gray-700 hover:text-gray-800"
+      )}
+      // onClick={() => open ? closePopover() : openPopover(category.id)}
+    >
+      {name}
+    </Popover.Button>
+  ) : (
+    <button>
+      <Link 
+        href={`/${name.toLowerCase()}`} 
+        className="text-darkGray text-sm font-semibold">
         {name}
-      </Popover.Button>
-    ) : (
-      <button>
-        <Link href={`/${name.toLowerCase()}`}> {name} </Link>
-      </button>
-    )
+      </Link>
+    </button>
   );
 };
 
 export default PopoverButton;
-
-
-
-

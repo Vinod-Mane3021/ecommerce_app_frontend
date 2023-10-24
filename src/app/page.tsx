@@ -1,7 +1,7 @@
 
 import React from 'react'
 import LoginForm from './authentication/LogIn/page'
-import Header from '@/components/Header'
+import Header from '@/components/header/Header'
 import NavBar from '@/components/navBar/NavBar'
 import NavBarMobile from '@/components/navBarMobile/NavBarMobile'
 import HomePage from './home/page'
@@ -17,7 +17,6 @@ const page = () => {
         </div>
         <div className='mt-28'>
           <HomePage/>
-          
         </div>
       {/* <NavBarMobile/> */}
     </main>

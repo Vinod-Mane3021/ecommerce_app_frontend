@@ -33,18 +33,26 @@ const BestsellerItem = ({image, name, price, originPrice, discount, colorQuantit
         </div>
 
 
-      <div className="px-2 py-2 flex flex-col gap-2 justify-center">
-        <p className="text-base ">{name}</p>
-        <div className="flex gap-2 items-center">
-          <p className="text-green-800 text-sm font-bold">${price}</p>
-          <p className="text-xs line-through text-gray-600">${originPrice}.00</p>
-          <DiscountOfferBox discount={discount}/>
-          <p className="pl-4 text-sm">Quantity : {totalQuantity}</p>
+      <div className="px-2 py-2 flex flex-col gap-0 h-full justify-between">
+
+        <div className="flex flex-col gap-1">
+          <p className="text-base ">{name}</p>
+          <div className="flex gap-2 items-center justify-between">
+            <div className="flex gap-2 items-center">
+            <p className="text-green-800 text-sm font-bold">${price}</p>
+            <p className="text-xs line-through text-gray-600">${originPrice}.00</p>
+            <DiscountOfferBox discount={discount}/>
+            </div>
+            <p className="pl-5 text-sm">{totalQuantity}</p>
+          </div>
         </div>
+
+
         <div className="flex gap-5 items-center justify-between">
           <p className="text-sm">colors : {colorQuantity}</p>
           <AddToCartButton handleAddToCart={handleAddToCart}/>
         </div>
+
       </div>
 
 
