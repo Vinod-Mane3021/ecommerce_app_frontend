@@ -10,7 +10,7 @@ const NowTrending = () => {
 
       <ul className="grid grid-cols-1  sm:grid-cols-2 gap-8 md:gap-16">
         {nowTrending.map((Item) => (
-          <Link href="#">
+          <Link key={Item.title} href="#">
             <li className="relative">
               <img src={Item.image} alt={Item.title} />
               <div className="absolute bottom-7 left-7 lg:bottom-14 lg:left-14">
