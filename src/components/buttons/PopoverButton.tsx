@@ -1,5 +1,5 @@
 // import { classNames } from "@/utilities/classNames/classNames";
-import { classNames } from "@/utilities/classNames/classNames";
+import { classNames } from "@/utilities/functions/classNames";
 import { PopoverButtonProps } from "@/utilities/types/navBarTypes";
 import { Popover } from "@headlessui/react";
 import Link from "next/link";

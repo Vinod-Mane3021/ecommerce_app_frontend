@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import LongArrowRightIcons from '../icons/arrow/LongArrowRightIcons'
-import { classNames } from '@/utilities/classNames/classNames'
+import { classNames } from '@/utilities/functions/classNames'
 
 const NavigateButton = () => {
 

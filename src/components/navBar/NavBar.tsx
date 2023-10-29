@@ -13,7 +13,7 @@ import MainCategories from "./MainCategories";
 import CategoriesSection from "./CategoriesSection";
 import { CategoryProps } from "@/utilities/types/navBarTypes";
 import PopoverButton from "../buttons/PopoverButton";
-import { classNames } from "@/utilities/classNames/classNames";
+import { classNames } from "@/utilities/functions/classNames";
 
 const NavBar = () => {
   // const [openCategory, setOpenCategory] = useState(0);

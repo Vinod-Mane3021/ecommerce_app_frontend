@@ -24,7 +24,7 @@ const LacosteInside = () => {
             <p>{1}</p>
             <p className="text-gray-300">/</p>
             <p>{5}</p>
-            <ArrowRightIcon color="#fff" />
+            <ArrowRightIcon color="#fff" heightWidth="7" strokeWidth="1.5" />
           </div>
         </div>
       </div>

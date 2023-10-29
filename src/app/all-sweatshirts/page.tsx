@@ -40,16 +40,16 @@ const allSweatshirts = () => {
       {/* Products */}
       <ul className="grid mb-6 grid-cols-2 justify-center lg:grid-cols-3 xl:grid-cols-4 gap-x-2 gap-y-6 px-4 md:px-8 lg:px-16">
         {allSweatshirtsData.map((Item, index: number) => (
-            <Link key={index} href={`/all-sweatshirts/${Item.title}`}>
+            <Link key={index} href={`/all-sweatshirts/${Item.id}`}>
               <ProductItem
-                id={index}
+                id={Item.id}
                 image={Item.image}
-                name={Item.title}
+                title={Item.title}
                 price={Item.price}
-                originPrice={Item.originalPrice}
+                originalPrice={Item.originalPrice}
                 discount={Item.discount}
-                colorQuantity={Item.colorQuantity}
-                totalQuantity={Item.quantity}
+                colors={Item.colors}
+                quantity={Item.quantity}
                 />
               </Link>
         ))}

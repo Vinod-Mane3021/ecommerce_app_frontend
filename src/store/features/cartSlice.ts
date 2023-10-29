@@ -2,21 +2,11 @@ import { CategoryProps } from '@/utilities/types/navBarTypes'
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../store'
+import { allSweatshirtProductTypes } from '@/utilities/types/allSweatshirtProductTypes'
 
-interface CartItemsProps {
-    id: number
-    name: string
-    image: string
-    price: number
-    originalPrice: number
-    color: string
-    size: string
-    totalQuantity: number
-    userSelectedProductQuantity: number
-}
 
 interface CartState {
-    cartItems: CartItemsProps[]
+    cartItems: allSweatshirtProductTypes[]
     // totalCartItems: number
 }
 
@@ -29,13 +19,13 @@ export const cartSlice = createSlice({
     name: "cart",
     initialState,
     reducers: {
-        addToCart: ((state, action: PayloadAction<CartItemsProps>) => {
+        addToCart: ((state, action: PayloadAction<allSweatshirtProductTypes>) => {
             const existingCartItem = state.cartItems.find((item) => {
                 return (item.id === action.payload.id)
             })
             if(existingCartItem) {
                 console.log("existingCartItem")
-                existingCartItem.userSelectedProductQuantity += action.payload.userSelectedProductQuantity
+                // existingCartItem.userSelectedProductQuantity += action.payload.userSelectedProductQuantity
             } else {
                 console.log("not existingCartItem")
                 state.cartItems.push(action.payload)

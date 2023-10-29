@@ -52,7 +52,7 @@ const NavBarMobile = () => {
                 <ProfileIcon height="18px" width="18px" />
                 <p>My Account</p>
               </div>
-              <ArrowRightIcon/>
+              <ArrowRightIcon color="#292929" heightWidth="7" strokeWidth="1.5"/>
             </Link>
 
             {/* Find a boutique - find store */}

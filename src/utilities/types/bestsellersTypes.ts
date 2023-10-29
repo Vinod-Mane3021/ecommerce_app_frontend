@@ -6,5 +6,9 @@ export interface BestsellersProps {
   originPrice: number;
   discount: number;
   totalQuantity: number;
-  colorQuantity: number;
+  colors: ColorsProps[]
+}
+
+interface ColorsProps {
+  name: string
 }

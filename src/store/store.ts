@@ -1,11 +1,44 @@
-import { configureStore } from "@reduxjs/toolkit";
-import addToCartReducer  from "./features/cartSlice";
+import {
+  configureStore,
+  createReducer,
+  getDefaultMiddleware,
+} from "@reduxjs/toolkit";
+import cartReducer from "./features/cartSlice";
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from "redux-persist";
+import storage from "redux-persist/lib/storage";
+import { PersistGate } from "redux-persist/integration/react";
+import { getDefaultResultOrder } from "dns";
+
+const persistConfig = {
+  key: "root",
+  version: 1,
+  storage,
+};
+
+const persistedReducer = persistReducer(persistConfig, cartReducer);
 
 export const store = configureStore({
-    reducer: {
-        cart: addToCartReducer
-    }
-})
+  reducer: {
+    cart: persistedReducer
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+});
 
-export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch
+export let persistor = persistStore(store) 
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
