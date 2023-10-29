@@ -19,8 +19,7 @@ const config: Config = {
       colors: {
         darkGray: "#292929",
         lightGray: "#f4f4f4"
-      }
-      
+      },
     },
   },
   plugins: [],

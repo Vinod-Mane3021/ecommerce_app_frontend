@@ -4,7 +4,7 @@ import ArrowLeftIcon from "../icons/arrow/ArrowLeftIcon";
 
 const LacosteInside = () => {
   return (
-    <div className="w-full text-white bg-darkGray pt-10 my-10 flex flex-col min-h-fit gap-5 relative pb-20">
+    <div className="w-full text-white bg-darkGray pt-10 mt-10 flex flex-col min-h-fit gap-5 justify-center relative pb-20">
       {/* Top content */}
       <div className="px-4 md:px-8 lg:px-16 w-full flex items-center justify-between">
         {/* title and logo */}
@@ -12,7 +12,7 @@ const LacosteInside = () => {
           <p className="text-xl md:text-2xl font-bold">Lacoste Inside</p>
           <img
             className="w-12 md:w-16"
-            src="/images/logodarkGray&White.png"
+            src="/images/logoBlack&White.png"
             alt=""
           />
         </div>

@@ -1,4 +1,4 @@
-import { BestsellersProps } from "../types/bestsellersTypes";
+import { BestsellersProps } from "../../types/bestsellersTypes";
 
 export const bestsellers: BestsellersProps[] = [
     {

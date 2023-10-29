@@ -8,6 +8,7 @@ const FavoriteSvg = ({height, width} : IconProps) => {
       xmlns="http://www.w3.org/2000/svg"
       width={height}
       height={width}
+      // className="h-4 w-4 md:h-[100px] md:w-[100px]"
       viewBox="0 0 512.000000 512.000000"
       preserveAspectRatio="xMidYMid meet"
     >

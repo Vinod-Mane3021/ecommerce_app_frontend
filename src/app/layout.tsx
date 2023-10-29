@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/header/Header";
+import ChildLayout from "./childLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,13 +19,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>  
-        {children}
-        </body>
+
+      <body className={inter.className}>
+      <ChildLayout>
+        <>
+          <div className="sticky top-0 w-full z-20 bg-white">
+            <Header />
+            <div className="static w-full z-20 bg-white hidden lg:block">
+              <NavBar />
+            </div>
+          </div>
+          {children}
+        </>
+      </ChildLayout>
+      </body>
     </html>
   );
 }
-
-
-
-

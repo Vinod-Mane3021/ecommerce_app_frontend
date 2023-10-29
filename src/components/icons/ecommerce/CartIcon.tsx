@@ -1,15 +1,18 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import CartIconSvg from "@/utilities/svgIcons/CartIconSvg";
+import { useAppSelector } from "@/store/hooks";
+import Link from "next/link";
 
 const CartIcon = () => {
+  const cartItems = useAppSelector((state) => state.cart.cartItems)
   return (
-    <div className="relative p-2 rounded-full hover:bg-gray-200 cursor-pointer duration-300">
-      <div className="rounded-full p-[1.3px] bg-darkGray flex items-center justify-center absolute left-6 bottom-5">
-        <p className="text-white text-xs">{99}</p>
+    <Link href="/checkout" className="relative p-2 rounded-full hover:bg-gray-200 cursor-pointer duration-300">
+      <div className="rounded-full h-4 w-4 bg-darkGray flex items-center justify-center absolute left-6 bottom-5">
+        <p className="text-white" style={{fontSize: 10}}>{cartItems.length}</p>
       </div>
       <CartIconSvg/>
-    </div>
+    </Link>
   );
 };
 

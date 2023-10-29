@@ -1,7 +1,7 @@
 "use client";
 import React, { Fragment, SetStateAction, useEffect, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
-import { navigation } from "../../utilities/navBarData/categoryData";
+import { navigation } from "../../utilities/data/navBarData/categoryData";
 import Link from "next/link";
 import ArrowRightIcon from "../icons/arrow/ArrowRightIcon";
 import HomePageNav from "./HomePageNav";

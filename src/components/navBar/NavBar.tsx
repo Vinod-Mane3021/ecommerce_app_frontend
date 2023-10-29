@@ -5,7 +5,7 @@ import { MdKeyboardArrowUp } from "react-icons/md";
 import ArrowUpIcon from "../icons/arrow/ArrowUpIcon";
 import ArrowDownIcon from "../icons/arrow/ArrowDownIcon";
 import CloseIcon from "../icons/other/CloseIcon";
-import { navigation } from "../../utilities/navBarData/categoryData";
+import { navigation } from "../../utilities/data/navBarData/categoryData";
 import Link from "next/link";
 import ImageCategory from "./ImageCategory";
 import Sections from "./CategoriesSection";

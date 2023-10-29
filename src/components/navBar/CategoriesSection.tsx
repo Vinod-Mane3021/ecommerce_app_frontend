@@ -16,7 +16,7 @@ const CategoriesSection = ({ id, name, items }: SectionsProps) => {
         aria-labelledby={`${name}-heading`}
         className="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
       >
-        {items.map((item: ItemsProps) => (
+        {items?.map((item: ItemsProps) => (
           <li key={item.name} className="flex">
             <Link
               href={item.href}

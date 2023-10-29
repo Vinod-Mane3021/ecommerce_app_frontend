@@ -1,4 +1,4 @@
-import { nowTrending } from "@/utilities/homePageData/nowTrending";
+import { nowTrending } from "@/utilities/data/homePageData/nowTrending";
 import Link from "next/link";
 import React from "react";
 import NavigateButton from "../buttons/NavigateButton";
@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const NowTrending = () => {
   return (
-    <div className="flex flex-col gap-6 px-4 md:px-16">
+    <div className="flex flex-col gap-6 px-4 md:px-8 lg:px-16">
       <p className="text-2xl font-bold text-darkGray">Now Trending</p>
 
       <ul className="grid grid-cols-1  sm:grid-cols-2 gap-8 md:gap-16">

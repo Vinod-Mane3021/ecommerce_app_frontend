@@ -6,7 +6,7 @@ interface Props {
     closePanel: () => void
 }
 
-const CloseIcon = () => {
+const CloseIcon = ({closePanel} : Props) => {
     // const [color, setColor] = useState('darkGray')
   return (
     <svg

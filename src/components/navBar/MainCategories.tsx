@@ -11,17 +11,18 @@ const MainCategories = ({sections, imageData} : CategoryProps ) => {
   return (
     <Transition
       as={Fragment}
-      enter="transition ease-out duration-200"
+      enter="transition ease-out duration-500"
       enterFrom="opacity-0"
       enterTo="opacity-100"
-      leave="transition ease-in duration-150"
+      leave="transition ease-in duration-300"
       leaveFrom="opacity-100"
       leaveTo="opacity-0"
     >
-        <Popover.Panel className="absolute inset-x-0 top-full text-sm text-gray-500 duration-300 ease-in-out ">
+        <Popover.Panel className="absolute h-full inset-x-0 top-full text-sm text-gray-500 duration-300 ease-in-out ">
         <div className="relative bg-white">
-          <div className="mx-auto max-w-[90%]">
-            <div className="gap-y-10 py-14 flex justify-evenly">
+          {/* h-[650px] */}
+          <div className="mx-auto max-w-full scrollbar-hide">
+            <div className="gap-y-10 px-10 py-10 flex justify-evenly">
             
               <div className="row-start-1 grid grid-cols-5 gap-y-10 text-sm w-screen">
                 {sections?.map((section: SectionsProps) => (
@@ -37,7 +38,7 @@ const MainCategories = ({sections, imageData} : CategoryProps ) => {
             </div>
 
 
-            <div className="flex gap-3 pb-10">
+            <div className="px-10 flex gap-3 pb-10">
               {imageData?.map((Item: ImageDataProps) => (
                 <ImageCategory
                   key={Item.id}
