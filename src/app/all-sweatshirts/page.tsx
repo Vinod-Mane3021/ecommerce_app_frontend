@@ -1,6 +1,6 @@
 'use client'
 import Footer from "@/components/footer/Footer";
-import ProductItem from "./ProductItem";
+import ProductItem from "../../components/all-sweatshirts/ProductItem";
 import FilterIcon from "@/components/icons/ecommerce/FilterIcon";
 import { allSweatshirtsData } from "@/utilities/data/productsCategory/all-sweatshirts";
 import Link from "next/link";

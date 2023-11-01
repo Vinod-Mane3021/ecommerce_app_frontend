@@ -1,12 +1,9 @@
 "use client";
-import AddToCartButton from "@/components/buttons/AddToCartButton";
 import DiscountOfferBox from "@/components/home/DiscountOfferBox";
 import FilledFavoriteIcon from "@/components/icons/other/FilledFavoriteIcon";
-import { addToCart } from "@/store/features/cartSlice";
 import { useAppDispatch } from "@/store/hooks";
 import FavoriteSvg from "@/utilities/svgIcons/FavoriteSvg";
 import { allSweatshirtProductTypes } from "@/utilities/types/allSweatshirtProductTypes";
-import { BestsellersProps } from "@/utilities/types/bestsellersTypes";
 import React, { useState } from "react";
 
 const ProductItem = ({

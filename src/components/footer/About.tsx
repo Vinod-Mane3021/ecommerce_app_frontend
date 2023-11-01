@@ -77,7 +77,7 @@ const About = () => {
         <div className='text-xs flex-col gap-3 w-60 hidden lg:flex'>
             <h1 className='text-slate-500 font-semibold pb-2'>HELP & CONTACTS</h1>
             <p className='hover:underline hover:cursor-pointer'>By phone</p>
-            <p className='hover:underline hover:cursor-pointer'>1-800-452-2678</p>
+            <p className='hover:underline hover:cursor-pointer'>2-222-222-2222</p>
             <p>Contact us Monday through Friday from 9 am to 11 pm EST, and Saturday and Sunday from 10 am to 9 pm EST.</p>
             <p className='hover:underline hover:cursor-pointer'>By email and by chat</p>
             <p className='hover:underline hover:cursor-pointer'>FAQ</p>
@@ -139,6 +139,7 @@ const About = () => {
         </div>
       </div>
 
+      
 
     </div>
 
