@@ -7,6 +7,7 @@ export interface allSweatshirtProductTypes {
   discount: number;
   colors: ColorsProps[];
   quantity: number;
+  customerCartQuantity: number
 }
 
 export interface ColorsProps {

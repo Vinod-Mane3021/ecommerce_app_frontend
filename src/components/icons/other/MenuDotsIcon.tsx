@@ -2,10 +2,9 @@ import React from "react";
 
 interface Props {
     heightWidth: string
-    handleMenu: () => void
 }
 
-const MenuDotsIcon = ({heightWidth, handleMenu} : Props) => {
+const MenuDotsIcon = ({heightWidth} : Props) => {
   return (
     <svg
       version="1.0"
@@ -15,7 +14,6 @@ const MenuDotsIcon = ({heightWidth, handleMenu} : Props) => {
       viewBox="0 0 512.000000 512.000000"
       preserveAspectRatio="xMidYMid meet"
       className="hover:cursor-pointer"
-      onClick={handleMenu}
     >
       <g
         transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"

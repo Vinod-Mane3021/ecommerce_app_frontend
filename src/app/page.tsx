@@ -9,7 +9,7 @@ import ReduxCounter from "@/components/test/ReduxCounter";
 
 const page = () => {
   return (
-    <main className="font-fontPoppins bg-white">
+    <main className=" bg-white">
       {/* <div className="fixed top-0 w-full z-20 bg-white">
           <Header />
           <div className='fixed w-full z-20 bg-white hidden lg:block'>

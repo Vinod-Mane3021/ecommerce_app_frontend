@@ -9,28 +9,31 @@ import SelectProductSize from "@/components/all-sweatshirts/SelectProductSize";
 import ProductFooterText from "@/components/all-sweatshirts/ProductFooterText";
 import { useAppDispatch } from "@/store/hooks";
 import { addToCart } from "@/store/features/cartSlice";
-import { allSweatshirtProductTypes } from "@/utilities/types/allSweatshirtProductTypes";
+import { ColorsProps, allSweatshirtProductTypes } from "@/utilities/types/allSweatshirtProductTypes";
 import ViewBagButton from "@/components/buttons/ViewBagButton";
 
-
 interface Props {
-  productId: number
-}
+    params: {
+      product: allSweatshirtProductTypes
+    }
+  }
 
-const ProductPage = ({ params }: { params: Props }) => {
+//{product: allSweatshirtProductTypes}
+const ProductPage = ({ params }: Props ) => {
+  const product = params.product
+//product.params.product
+  const decodedProduct = decodeURIComponent(product)
+
+  // console.log("decodedProduct : " + decodedProduct)
+
+  const Product: allSweatshirtProductTypes = JSON.parse(decodedProduct);
+  // console.log(Product)
 
   const [isProductDispatched, setIsProductDispatched] = useState(false)
-
-  
-
-  // const productId = decodeURIComponent(params.product);
-
-  const Item = allSweatshirtsData.find((item) => item.id == params.productId && item);
 
   const dispatch = useAppDispatch();
 
   const handleAddToShoppingBag = (item: allSweatshirtProductTypes) => {
-    console.log(Item?.title + " is added to cart")
     dispatch(addToCart({
       id: item.id,
       image: item.image,
@@ -39,7 +42,8 @@ const ProductPage = ({ params }: { params: Props }) => {
       originalPrice: item.originalPrice,
       discount: item.discount,
       colors: item.colors,
-      quantity: item.quantity
+      quantity: item.quantity,
+      customerCartQuantity: 1
     }))
     setIsProductDispatched(true)
   }
@@ -50,23 +54,23 @@ const ProductPage = ({ params }: { params: Props }) => {
 
   return (
     <>
-      {Item ? (
+      {Product ? (
         <div className="flex flex-col lg:flex-row px-4 md:px-8 text-black items-center lg:px-16 py-10 justify-center gap-5 lg:gap-16 xl:gap-36">
-          <img className="md:h-[500px] xl:h-[600px] w-fit" src={Item.image} alt={Item.title} />
+          <img className="md:h-[500px] xl:h-[600px] w-fit" src={Product.image} alt={Product.title} />
           <div className="flex flex-col gap-3 md:gap-5 w-full lg:w-[35%]">
               <div className="w-fit flex flex-col gap-1 lg:gap-5"> 
-                <DiscountOfferBox discount={Item.discount} />
-                <p className=" md:text-lg">{Item.title}</p>
+                <DiscountOfferBox discount={Product.discount} />
+                <p className=" md:text-lg">{Product.title}</p>
                 <p className="text-xs md:text-sm text-darkGray">men - Gray</p>                   
               </div>
               {/* price and rating */}
-              <PriceAndRating price={Item.price} originalPrice={Item.originalPrice}/>
+              <PriceAndRating price={Product.price} originalPrice={Product.originalPrice}/>
               {/* select product color */}
-              <SelectProductColor image={Item.image}/>
+              <SelectProductColor image={Product.image}/>
               {/* select product size */}
               <SelectProductSize/>
               <div className="w-full flex justify-center items-center">
-                {!isProductDispatched && <AddToShoppingBagButton handleAddToShoppingBag={() => handleAddToShoppingBag(Item)}/>}
+                {!isProductDispatched && <AddToShoppingBagButton handleAddToShoppingBag={() => handleAddToShoppingBag(Product)}/>}
                 {isProductDispatched && <ViewBagButton handleViewBag={handleViewBag}/>}
               </div>
               <ProductFooterText/>
@@ -83,3 +87,6 @@ const ProductPage = ({ params }: { params: Props }) => {
 };
 
 export default ProductPage;
+
+
+

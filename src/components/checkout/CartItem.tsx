@@ -1,48 +1,113 @@
+"use client";
 import ArrowDownIcon from "@/components/icons/arrow/ArrowDownIcon";
 import MenuDotsIcon from "@/components/icons/other/MenuDotsIcon";
-import { ColorsProps, allSweatshirtProductTypes } from "@/utilities/types/allSweatshirtProductTypes";
-import React from "react";
+import { addToCart, updateCart } from "@/store/features/cartSlice";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
+import { classNames } from "@/utilities/functions/classNames";
+import {
+  ColorsProps,
+  allSweatshirtProductTypes,
+} from "@/utilities/types/allSweatshirtProductTypes";
+import React, { useState } from "react";
 import { SourceTextModule } from "vm";
 
-const CartItem = ({ id, image, title, price, originalPrice, quantity, discount, colors } : allSweatshirtProductTypes) => {
+const CartItem = ({
+  id,
+  image,
+  title,
+  price,
+  originalPrice,
+  quantity,
+  discount,
+  colors,
+  customerCartQuantity,
+}: allSweatshirtProductTypes) => {
+  const [isQuantityMenuPressed, setIsQuantityMenuPressed] = useState(false);
+  const dispatch = useAppDispatch();
 
-  const handleMenu = () => {
-    console.log("handle menu")
-  }
+  const handleMenu = (index: number) => {
+    setIsQuantityMenuPressed(false);
+    console.log("id : " + id);
+    dispatch(
+      updateCart({
+        id: id,
+        image: image,
+        title: title,
+        price: price,
+        originalPrice: originalPrice,
+        discount: discount,
+        colors: colors,
+        quantity: quantity,
+        customerCartQuantity: index,
+      })
+    );
+    console.log("handle menu ", index);
+  };
 
   return (
-    <li key={id} className="flex gap-5">
-      <span className="relative h-[150px] w-[165px] flex items-center overflow-hidden justify-center rounded-lg">
-        <img
-          className="h-full w-full object-cover"
-          src={image}
-          alt={title}
-        />
+    <li className="flex gap-5">
+      <span className="relative h-[180px] w-[175px] flex items-center overflow-hidden justify-center rounded-lg">
+        <img className="h-full w-full object-cover" src={image} alt={title} />
       </span>
 
-
       <div className="md:text-base w-full flex flex-col justify-between">
-
         <div className="w-full flex flex-col gap-2">
           <span className="flex justify-between w-full">
             <p className="text-sm">{title}</p>
-            <MenuDotsIcon heightWidth="17px" handleMenu={handleMenu}/>
+            <MenuDotsIcon heightWidth="17px" />
           </span>
-          <p className="text-xs text-gray-600">{colors[2].name}</p>
+          <p className="text-xs text-gray-600">{colors[0].name}</p>
           <span className="flex w-full justify-between hover:cursor-pointer">
             <p className="text-xs text-gray-600">Size XS - 2</p>
-            <div className="flex bg- bg-lightGray py-[3px] px-3 rounded-full items-center justify-center text-gray-700 text-sm">
-              <p>{3}</p>
-              <ArrowDownIcon/>
+
+            <div className="flex flex-col gap-2 w-fit relative">
+              {/*   */}
+              <div
+                onClick={() => setIsQuantityMenuPressed(!isQuantityMenuPressed)}
+                className={classNames(
+                  "flex bg-lightGray gap-1 py-[5px] px-[9px] border border-transparent rounded-full items-center justify-center text-gray-700 text-sm",
+                  isQuantityMenuPressed && "border border-[#7e7e7e]"
+                )}
+              >
+                <p className="text-black text-sm">
+                  {customerCartQuantity ? customerCartQuantity : 0}
+                </p>
+                <ArrowDownIcon />
+              </div>
+              {isQuantityMenuPressed && (
+                <menu
+                  className={classNames(
+                    "absolute z-50 mt-10 self-center bg-lightGray text-gray-700 text-sm rounded-lg items-center flex flex-col justify-center overflow-hidden",
+                    isQuantityMenuPressed && "border border-[#7e7e7e]"
+                  )}
+                >
+                  {Array.from({ length: 10 }, (_, i) => (
+                    <li
+                      key={i}
+                      className="hover:bg-[#7e7e7e] w-full bg-cover flex flex-col"
+                      onClick={() => handleMenu(i + 1)}
+                    >
+                      <button className="px-[15px]">{i + 1}</button>
+                    </li>
+                  ))}
+                </menu>
+              )}
             </div>
           </span>
         </div>
 
         <span className="flex gap-2">
-          <p className=" text-sm lg:text-base text-green-800 font-extrabold">${price}</p>
-          <p className="text-xs self-end font-semibold text-gray-600 line-through">${originalPrice}</p>
+          <p className=" text-sm lg:text-base text-green-800 font-extrabold">
+            ${customerCartQuantity > 0 ? customerCartQuantity * price : price}
+          </p>
+          <p className="text-xs self-end font-semibold text-gray-600 line-through">
+            $
+            {customerCartQuantity > 0
+              ? customerCartQuantity * originalPrice
+              : originalPrice}
+            .00
+          </p>
         </span>
-
       </div>
     </li>
   );

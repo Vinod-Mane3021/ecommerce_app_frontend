@@ -15,6 +15,7 @@ const ProductItem = ({
   discount,
   colors,
   quantity,
+  customerCartQuantity
 }: allSweatshirtProductTypes) => {
   const [FavoriteAdded, setFavoriteAdded] = useState(false);
 

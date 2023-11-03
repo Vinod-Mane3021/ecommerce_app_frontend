@@ -25,9 +25,9 @@ const MainCategories = ({sections, imageData} : CategoryProps ) => {
             <div className="gap-y-10 px-10 py-10 flex justify-evenly">
             
               <div className="row-start-1 grid grid-cols-5 gap-y-10 text-sm w-screen">
-                {sections?.map((section: SectionsProps) => (
+                {sections?.map((section: SectionsProps, index) => (
                   <CategoriesSection
-                    key={section.id}
+                    key={index}
                     id={section.id}
                     name={section.name}
                     items={section.items}

@@ -12,7 +12,7 @@ const ProductItem = ({
   price,
   originPrice,
   discount,
-  colorQuantity,
+  colors,
   totalQuantity,
 }: BestsellersProps) => {
   const [FavoriteAdded, setFavoriteAdded] = useState(false);
@@ -64,7 +64,7 @@ const ProductItem = ({
           <div className="flex gap-5 items-center justify-between">
             <span className="flex gap-2">
               <p className="text-xs md:text-sm lg:text-base">
-                colors : {colorQuantity}
+                colors : {colors}
               </p>
             </span>
             <AddToCartButton handleAddToCart={handleAddToCart} />

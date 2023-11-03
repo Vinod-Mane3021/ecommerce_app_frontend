@@ -6,6 +6,9 @@ import { allSweatshirtsData } from "@/utilities/data/productsCategory/all-sweats
 import Link from "next/link";
 import React from "react";
 import { preload } from "react-dom";
+import { stringify } from "postcss";
+import { usePathname } from "next/navigation";
+import { allSweatshirtProductTypes } from "@/utilities/types/allSweatshirtProductTypes";
 
 const allSweatshirts = () => {
 
@@ -39,8 +42,11 @@ const allSweatshirts = () => {
       </div>
       {/* Products */}
       <ul className="grid mb-6 grid-cols-2 justify-center lg:grid-cols-3 xl:grid-cols-4 gap-x-2 gap-y-6 px-4 md:px-8 lg:px-16">
-        {allSweatshirtsData.map((Item, index: number) => (
-            <Link key={index} href={`/all-sweatshirts/${Item.id}`}>
+        {allSweatshirtsData.map((Item: allSweatshirtProductTypes, index: number) => { 
+          const encodedProduct = encodeURIComponent(JSON.stringify(Item))
+          return(//encodeURIComponent(JSON.stringify(Item))
+            <Link key={index} href={`/product/${encodedProduct}`}
+            >
               <ProductItem
                 id={Item.id}
                 image={Item.image}
@@ -50,9 +56,10 @@ const allSweatshirts = () => {
                 discount={Item.discount}
                 colors={Item.colors}
                 quantity={Item.quantity}
+                customerCartQuantity={Item.customerCartQuantity}
                 />
               </Link>
-        ))}
+        )})}
       </ul>
       {/* navigate to main page again */}
       <div className="bg-lightGray mb-6 flex items-center justify-center py-12">

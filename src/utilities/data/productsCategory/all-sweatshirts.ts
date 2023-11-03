@@ -13,7 +13,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 23
+        quantity: 23,
+        customerCartQuantity: 0
     
     },
     {
@@ -29,7 +30,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Purple • 4PW"},
             {name: "White • 70V"},
         ],
-        quantity: 12
+        quantity: 12,
+        customerCartQuantity: 0
     },
     {
         id: 3,
@@ -45,7 +47,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Black • 031"},
             {name: "Brown • 031"},
         ],
-        quantity: 120
+        quantity: 120,
+        customerCartQuantity: 0
     },
     {
         id: 4,
@@ -59,7 +62,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 10
+        quantity: 10,
+        customerCartQuantity: 0
     },
     {
         id: 5,
@@ -73,7 +77,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 11
+        quantity: 11,
+        customerCartQuantity: 0
     },
     {
         id: 6,
@@ -87,7 +92,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 10
+        quantity: 10,
+        customerCartQuantity: 0
     },
     {
         id: 7,
@@ -101,7 +107,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 90
+        quantity: 90,
+        customerCartQuantity: 0
     },
     {
         id: 8,
@@ -115,7 +122,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 50
+        quantity: 50,
+        customerCartQuantity: 0
     },
     {
         id: 9,
@@ -129,7 +137,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 20
+        quantity: 20,
+        customerCartQuantity: 0
     },
     {
         id: 10,
@@ -143,7 +152,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 63
+        quantity: 63,
+        customerCartQuantity: 0
     },
     {
         id: 11,
@@ -157,7 +167,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 63
+        quantity: 63,
+        customerCartQuantity: 0
     },
     {
         id: 12,
@@ -171,7 +182,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 63
+        quantity: 63,
+        customerCartQuantity: 0
     },
     {
         id: 13,
@@ -185,7 +197,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 6
+        quantity: 6,
+        customerCartQuantity: 0
     },
     {
         id: 14,
@@ -199,7 +212,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 8
+        quantity: 8,
+        customerCartQuantity: 0
     },
     {
         id: 15,
@@ -213,7 +227,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 8
+        quantity: 8,
+        customerCartQuantity: 0
     },
     {
         id: 16,
@@ -227,7 +242,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 8
+        quantity: 8,
+        customerCartQuantity: 0
     },
     {
         id: 17,
@@ -241,7 +257,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 8
+        quantity: 8,
+        customerCartQuantity: 0
     },
     {
         id: 18,
@@ -255,7 +272,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 8
+        quantity: 8,
+        customerCartQuantity: 0
     },
     {
         id: 19,
@@ -269,7 +287,8 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 12
+        quantity: 12,
+        customerCartQuantity: 0
     },
     {
         id: 20,
@@ -283,6 +302,7 @@ export const allSweatshirtsData: allSweatshirtProductTypes[] = [
             {name: "Grey Chine • CCA"},
             {name: "White • 70V"},
         ],
-        quantity: 7
+        quantity: 7,
+        customerCartQuantity: 0
     }
 ]

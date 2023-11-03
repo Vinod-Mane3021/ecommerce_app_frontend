@@ -7,14 +7,16 @@ import AuthCheck from "./AuthCheck";
 interface Props {
   TOTAL_CART_ITEMS: number;
   cartItems: allSweatshirtProductTypes[];
+  totalCartItems: number
 }
 
-const CartAndDeliveryOptions = ({ TOTAL_CART_ITEMS, cartItems }: Props) => {
+const CartAndDeliveryOptions = ({ TOTAL_CART_ITEMS, cartItems, totalCartItems }: Props) => {
+  const [auth, setAuth] = useState(true);
 
-  const [auth, setAuth] = useState(true)
+  
 
   return (
-    <div className="bg-[#fafafa] pt-6 lg:py-12 w-full lg:w-[65%] flex gap-2 px-4 md:p-6 xl:px-10 flex-col justify-center items-center">
+    <div className="bg-[#fafafa] py-6 lg:py-10 w-full lg:w-[65%] flex px-4 md:px-6 xl:px-10 flex-col justify-center items-center">
       <div className="w-full xl:w-[72%] flex flex-col gap-8">
         <div className="flex items-center gap-5">
           <p className="bg-green-600 w-fit p-[8px] text-xs font-bold text-white rounded-full">
@@ -36,24 +38,42 @@ const CartAndDeliveryOptions = ({ TOTAL_CART_ITEMS, cartItems }: Props) => {
         </Link>
       </div>
 
-      <ul className="w-full xl:w-[72%] mt-5 shadow-md bg-white rounded-xl px-4 lg:px-16 py-6 lg:py-16 flex flex-col gap-5 overflow-hidden">
-        <p className="text-base lg:text-xl font-bold text-darkGray">
-          {TOTAL_CART_ITEMS} items
-        </p>
-        {cartItems.map((item) => (
-          <CartItem
-            key={item.id}
-            id={item.id}
-            image={item.image}
-            originalPrice={item.originalPrice}
-            price={item.price}
-            quantity={item.quantity}
-            title={item.title}
-            colors={item.colors}
-            discount={item.discount}
-          />
-        ))}
-      </ul>
+      <div className="w-full xl:w-[72%] mt-5 shadow-md bg-white rounded-xl px-4 lg:px-16 pt-6 lg:pt-16 pb-32 flex flex-col gap-5 overflow-hidden">
+        
+        {cartItems.length > 0 ? (
+          <>
+            <h1 className="text-base lg:text-xl flex gap-2 font-bold text-darkGray">
+              {totalCartItems}
+              {totalCartItems > 1 ? <p>items</p> : <p>item</p>}
+            </h1>
+          </>
+        ) : (
+          <p className="self-center text-darkGray font-semibold">
+            No items added in your cart
+          </p>
+        )}
+
+        <ul className="flex flex-col gap-14">
+          {cartItems.map((item, index) => {
+            return (
+              cartItems && (
+                <CartItem
+                  key={index}
+                  id={item.id}
+                  image={item.image}
+                  originalPrice={item.originalPrice}
+                  price={item.price}
+                  quantity={item.quantity}
+                  title={item.title}
+                  colors={item.colors}
+                  discount={item.discount}
+                  customerCartQuantity={item.customerCartQuantity}
+                />
+              )
+            );
+          })}
+        </ul>
+      </div>
 
       {auth && <AuthCheck />}
     </div>
