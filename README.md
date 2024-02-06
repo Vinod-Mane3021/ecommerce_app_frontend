@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 # ecommerce_app_backend - FrontEnd
-=======
 #visit to Ecommerce webite - https://youtu.be/nlc77FvlsPI
->>>>>>> 1678666908f72c5fdfc27e0d8fd89575fdb7e045
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
