@@ -1,9 +1,9 @@
 import React from 'react'
-import VisaIcon from '../icons/payments/VisaIcon'
-import ApplePayIcon from '../icons/payments/ApplePayIcon'
-import MasterCardIcon from '../icons/payments/MasterCardIcon'
-import AmexIcon from '../icons/payments/AmexIcon'
-import DiscoverIcon from '../icons/payments/DiscoverIcon'
+import VisaIcon from '@/components/icons/payments/VisaIcon'
+import ApplePayIcon from '@/components/icons/payments/ApplePayIcon'
+import MasterCardIcon from '@/components/icons/payments/MasterCardIcon'
+import AmexIcon from '@/components/icons/payments/AmexIcon'
+import DiscoverIcon from '@/components/icons/payments/DiscoverIcon'
 
 const PaymentsOptions = () => {
   return (

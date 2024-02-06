@@ -9,7 +9,7 @@ const LacosteEssentials = () => {
       <ul className='flex flex-row overflow-x-auto px-4 md:px-16 gap-4 sm:gap-4 md:gap-16  scroll-smooth overflow-hidden scrollbar-hide'>
       {lacosteEssentials.map((Item, index: number) => { 
           return (
-            <Link key={index} href="/all-sweatshirts">  
+            <Link key={index} href={`essentials/${Item.route}`}>    
               <li className='flex flex-col gap-4 hover:cursor-pointer hover:underline' key={index}>
                 <img className='min-h-[380] min-w-[250px] md:min-h-[460px] md:min-w-[330px]' src={Item.image} alt="image" />
                 <p>{Item.name}</p>

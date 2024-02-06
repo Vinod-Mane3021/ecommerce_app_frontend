@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import CartItem from "./CartItem";
 import Link from "next/link";
-import { allSweatshirtProductTypes } from "@/utilities/types/allSweatshirtProductTypes";
+import { allSweatshirtProductTypes } from "@/types/productTypes";
 import AuthCheck from "./AuthCheck";
 
 interface Props {
   TOTAL_CART_ITEMS: number;
   cartItems: allSweatshirtProductTypes[];
-  totalCartItems: number
+  totalCartItems: number;
 }
 
-const CartAndDeliveryOptions = ({ TOTAL_CART_ITEMS, cartItems, totalCartItems }: Props) => {
+const CartAndDeliveryOptions = ({
+  TOTAL_CART_ITEMS,
+  cartItems,
+  totalCartItems,
+}: Props) => {
   const [auth, setAuth] = useState(true);
-
-  
 
   return (
     <div className="bg-[#fafafa] py-6 lg:py-10 w-full lg:w-[65%] flex px-4 md:px-6 xl:px-10 flex-col justify-center items-center">
@@ -39,7 +41,6 @@ const CartAndDeliveryOptions = ({ TOTAL_CART_ITEMS, cartItems, totalCartItems }:
       </div>
 
       <div className="w-full xl:w-[72%] mt-5 shadow-md bg-white rounded-xl px-4 lg:px-16 pt-6 lg:pt-16 pb-32 flex flex-col gap-5 overflow-hidden">
-        
         {cartItems.length > 0 ? (
           <>
             <h1 className="text-base lg:text-xl flex gap-2 font-bold text-darkGray">

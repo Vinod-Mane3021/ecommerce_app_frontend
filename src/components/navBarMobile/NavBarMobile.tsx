@@ -3,14 +3,15 @@ import React, { Fragment, SetStateAction, useEffect, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import { navigation } from "../../utilities/data/navBarData/categoryData";
 import Link from "next/link";
-import ArrowRightIcon from "../icons/arrow/ArrowRightIcon";
+import ArrowRightIcon from "@/components/icons/arrow/ArrowRightIcon";
 import HomePageNav from "./HomePageNav";
-import ProfileIcon from "../icons/ecommerce/ProfileIcon";
-import LocationIcon from "../icons/ecommerce/LocationIcon";
-import BoxIcon from "../icons/other/BoxIcon";
-import FavoriteIcon from "../icons/other/FavoriteIcon";
-import FavoriteSvg from "@/utilities/svgIcons/FavoriteSvg";
-import SupportIcon from "../icons/other/SupportIcon";
+
+import FavoriteSvg from "../../../public/svgIcons/FavoriteSvg";
+import ProfileIcon from "@/components/icons/ecommerce/ProfileIcon";
+import LocationIcon from "@/components/icons/ecommerce/LocationIcon";
+import BoxIcon from "@/components/icons/other/BoxIcon";
+import SupportIcon from "@/components/icons/other/SupportIcon";
+
 
 const NavBarMobile = () => {
   const isAuth = false;

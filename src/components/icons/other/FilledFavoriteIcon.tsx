@@ -1,4 +1,4 @@
-import { IconProps } from "@/utilities/types/IconType";
+import { IconProps } from "@/types/IconType";
 import React from "react";
 
 const FilledFavoriteIcon = ({height, width} : IconProps) => {

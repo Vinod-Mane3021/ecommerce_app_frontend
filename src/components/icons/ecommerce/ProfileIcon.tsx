@@ -1,5 +1,5 @@
 
-import ProfileSvg from '@/utilities/svgIcons/ProfileSvg'
+import ProfileSvg from '../../../../public/svgIcons/ProfileSvg'
 import React from 'react'
 
 interface Props {

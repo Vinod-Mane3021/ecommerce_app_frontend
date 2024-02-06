@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import MasterCardIcon from '../icons/payments/MasterCardIcon'
+import MasterCardIcon from '@/components/icons/payments/MasterCardIcon'
 
 const SpacialOffer = () => {
   return (

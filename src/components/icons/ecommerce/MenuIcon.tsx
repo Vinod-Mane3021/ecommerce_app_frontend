@@ -1,4 +1,4 @@
-import MenuIconSvg from '@/utilities/svgIcons/MenuIconSvg'
+import MenuIconSvg from '../../../../public/svgIcons/MenuIconSvg'
 import React from 'react'
 import CloseIcon from '../other/CloseIcon'
 

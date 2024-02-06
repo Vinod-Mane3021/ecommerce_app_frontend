@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../types/IconType";
+import { IconProps } from "../../src/types/IconType";
 
 const FavoriteSvg = ({height, width} : IconProps) => {
   return (

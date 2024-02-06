@@ -1,4 +1,4 @@
-import { allSweatshirtProductTypes } from "@/utilities/types/allSweatshirtProductTypes";
+import { allSweatshirtProductTypes } from "@/types/productTypes";
 
 export const allSweatshirtsData: allSweatshirtProductTypes[] = [
     {

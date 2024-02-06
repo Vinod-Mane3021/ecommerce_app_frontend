@@ -1,4 +1,4 @@
-import { SectionsProps } from "../../../types/navBarTypes"
+import { SectionsProps } from "../../../../types/navBarTypes"
 
 export const newInSection: SectionsProps[] = [
     {

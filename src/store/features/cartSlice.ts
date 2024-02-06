@@ -1,8 +1,9 @@
-import { CategoryProps } from "@/utilities/types/navBarTypes";
+import { CategoryProps } from "@/types/navBarTypes";
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
-import { allSweatshirtProductTypes } from "@/utilities/types/allSweatshirtProductTypes";
+import { allSweatshirtProductTypes } from "@/types/productTypes";
+import { Id } from "@reduxjs/toolkit/dist/tsHelpers";
 
 interface CartState {
   cartItems: allSweatshirtProductTypes[];
@@ -56,7 +57,9 @@ export const cartSlice = createSlice({
       }
     },
     removeFromCart: (state, action: PayloadAction<number>) => {
-      //
+      const productId = action.payload
+      const NotRemovableItems = state.cartItems.filter(item => item.id != productId)
+      state.cartItems = NotRemovableItems
     },
   },
 });

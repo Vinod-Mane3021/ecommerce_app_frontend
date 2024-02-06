@@ -1,4 +1,4 @@
-import { IconHeightWidthProps } from "@/utilities/types/IconType";
+import { IconHeightWidthProps } from "@/types/IconType";
 import React from "react";
 
 const ShippingIcon = ({ heightWidth } : IconHeightWidthProps) => {

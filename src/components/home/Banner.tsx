@@ -20,7 +20,7 @@ const Banner = () => {
         <p className="text-white text-sm">No Code Needed, Price as Marked</p>
 
         <div className="flex flex-col md:flex-row gap-3 md:gap-5 text-sm py-4">
-          <Link href="/sale">
+          <Link href={`/sale/25% Off`}>
             <button
               className={`bg-white px-7 py-3 rounded-full hover:bg-darkGray hover:text-white duration-300`}
             >

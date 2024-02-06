@@ -4,12 +4,9 @@ import MenuDotsIcon from "@/components/icons/other/MenuDotsIcon";
 import { addToCart, updateCart } from "@/store/features/cartSlice";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { classNames } from "@/utilities/functions/classNames";
-import {
-  ColorsProps,
-  allSweatshirtProductTypes,
-} from "@/utilities/types/allSweatshirtProductTypes";
+import {allSweatshirtProductTypes} from "@/types/productTypes";
 import React, { useState } from "react";
-import { SourceTextModule } from "vm";
+import MenuToggle from "./Menu";
 
 const CartItem = ({
   id,
@@ -24,6 +21,7 @@ const CartItem = ({
 }: allSweatshirtProductTypes) => {
   const [isQuantityMenuPressed, setIsQuantityMenuPressed] = useState(false);
   const dispatch = useAppDispatch();
+  const [toggleMenu, setToggleMenu] = useState(false)
 
   const handleMenu = (index: number) => {
     setIsQuantityMenuPressed(false);
@@ -52,11 +50,14 @@ const CartItem = ({
 
       <div className="md:text-base w-full flex flex-col justify-between">
         <div className="w-full flex flex-col gap-2">
-          <span className="flex justify-between w-full">
+          <span className="flex justify-between w-full relative">
             <p className="text-sm">{title}</p>
-            <MenuDotsIcon heightWidth="17px" />
+              <div onClick={() => setToggleMenu(!toggleMenu)}>
+                <MenuDotsIcon heightWidth="17px" />
+              </div>
+            {toggleMenu && <MenuToggle/>}
           </span>
-          <p className="text-xs text-gray-600">{colors[0].name}</p>
+          <p className="text-xs text-gray-600">{colors[0].productColorName}</p>
           <span className="flex w-full justify-between hover:cursor-pointer">
             <p className="text-xs text-gray-600">Size XS - 2</p>
 
@@ -77,7 +78,7 @@ const CartItem = ({
               {isQuantityMenuPressed && (
                 <menu
                   className={classNames(
-                    "absolute z-50 mt-10 self-center bg-lightGray text-gray-700 text-sm rounded-lg items-center flex flex-col justify-center overflow-hidden",
+                    "absolute mt-10 self-center bg-lightGray text-gray-700 text-sm rounded-lg items-center flex flex-col justify-center overflow-hidden",
                     isQuantityMenuPressed && "border border-[#7e7e7e]"
                   )}
                 >

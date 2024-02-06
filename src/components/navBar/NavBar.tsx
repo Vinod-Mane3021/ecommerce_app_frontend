@@ -2,16 +2,13 @@
 import { Fragment, SetStateAction, useEffect, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import { MdKeyboardArrowUp } from "react-icons/md";
-import ArrowUpIcon from "../icons/arrow/ArrowUpIcon";
-import ArrowDownIcon from "../icons/arrow/ArrowDownIcon";
-import CloseIcon from "../icons/other/CloseIcon";
+import ArrowUpIcon from "@/components/icons/arrow/ArrowUpIcon";
 import { navigation } from "../../utilities/data/navBarData/categoryData";
 import Link from "next/link";
 import ImageCategory from "./ImageCategory";
 import Sections from "./CategoriesSection";
 import MainCategories from "./MainCategories";
 import CategoriesSection from "./CategoriesSection";
-import { CategoryProps } from "@/utilities/types/navBarTypes";
 import PopoverButton from "../buttons/PopoverButton";
 import { classNames } from "@/utilities/functions/classNames";
 

@@ -1,10 +1,26 @@
-import { bestsellers } from "@/utilities/data/homePageData/bestsellers";
-import { BestsellersProps } from "@/utilities/types/bestsellersTypes";
-import React, { useState } from "react";
+"use client";
+import { BestsellersProps } from "@/types/bestsellersTypes";
+import React, { useEffect, useState } from "react";
 import ProductItem from "../all-sweatshirts/ProductItem";
 import Link from "next/link";
+import { bestsellersApi } from "@/apis/bestsellers";
+import { useQuery } from "react-query";
 
 const Bestsellers = () => {
+  const { data, isLoading, isError } = useQuery(
+    "bestSellerData",
+    bestsellersApi
+  );
+
+  if (isLoading)
+    return (
+      <h1 className="px-4 md:px-8 lg:px-16">Fetching data please wait...</h1>
+    );
+
+  if (isError)
+    return (
+      <h1 className="px-4 md:px-8 lg:px-16">Got error while fetching data</h1>
+    );
 
   return (
     <>
@@ -13,26 +29,22 @@ const Bestsellers = () => {
       </p>
       <>
         <ul className="flex flex-row overflow-x-auto px-4 md:px-16 scroll-smooth overflow-hidden gap-2 scrollbar-hide">
-          {bestsellers.map((Item: BestsellersProps) => {
-            return (
-              <Link href={`product/${Item.id}`}>
-                <ProductItem
-                  key={Item.id}
-                  id={Item.id}
-                  image={Item.image}
-                  title={Item.name}
-                  price={Item.price}
-                  originalPrice={Item.originPrice}
-                  discount={Item.discount}
-                  colors={Item.colors}
-                  quantity={Item.totalQuantity}
-                  customerCartQuantity = {0}
-                  />
-                </Link>
-            );
-          })}
+          {data.map((Item: BestsellersProps) => (
+            <Link key={Item.productId} href={`product/${Item.productId}`}>
+              <ProductItem
+                id={Item.productId}
+                image={Item.productImage}
+                title={Item.productName}
+                price={Item.productPrice}
+                originalPrice={Item.productOriginalPrice}
+                discount={Item.productDiscount}
+                colors={Item.productColorList}
+                quantity={Item.productTotalQuantity}
+                customerCartQuantity={0}
+              />
+            </Link>
+          ))}
         </ul>
-        `
       </>
     </>
   );

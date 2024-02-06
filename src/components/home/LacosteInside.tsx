@@ -1,6 +1,6 @@
+import ArrowLeftIcon from "@/components/icons/arrow/ArrowLeftIcon";
+import ArrowRightIcon from "@/components/icons/arrow/ArrowRightIcon";
 import React from "react";
-import ArrowRightIcon from "../icons/arrow/ArrowRightIcon";
-import ArrowLeftIcon from "../icons/arrow/ArrowLeftIcon";
 
 const LacosteInside = () => {
   return (

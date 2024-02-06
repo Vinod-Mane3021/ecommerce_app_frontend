@@ -1,13 +1,13 @@
 import { Popover, Transition } from "@headlessui/react";
 import React, { Fragment } from "react";
 import Sections from "./CategoriesSection";
-import CloseIcon from "../icons/other/CloseIcon";
+import CloseIcon from "@/components/icons/other/CloseIcon";
 import ImageCategory from "./ImageCategory";
-import { CategoryProps, ImageDataProps, SectionsProps } from "@/utilities/types/navBarTypes";
+import { CategoryProps, ImageDataProps, SectionsProps } from "@/types/navBarTypes";
 import CategoriesSection from "./CategoriesSection";
 
 // main categories sections
-const MainCategories = ({sections, imageData} : CategoryProps ) => {
+const MainCategories = ({sections, imageData, name} : CategoryProps ) => {
   return (
     <Transition
       as={Fragment}
@@ -31,6 +31,7 @@ const MainCategories = ({sections, imageData} : CategoryProps ) => {
                     id={section.id}
                     name={section.name}
                     items={section.items}
+                    mainCategory={name}
                   />
                 ))}
               </div>

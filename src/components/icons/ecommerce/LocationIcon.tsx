@@ -1,5 +1,5 @@
-import LocationSvg from '@/utilities/svgIcons/LocationSvg'
-import { IconProps } from '@/utilities/types/IconType'
+import LocationSvg from '../../../../public/svgIcons/LocationSvg'
+import { IconProps } from '@/types/IconType'
 import React from 'react'
 
 const LocationIcon = ({width, height} : IconProps) => {

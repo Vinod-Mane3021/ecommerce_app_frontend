@@ -1,12 +1,11 @@
 import React from "react";
 import SearchBar from "../SearchFeilds/SearchBar";
-import LocationIcon from "../icons/ecommerce/LocationIcon";
-import FavoriteIcon from "../icons/other/FavoriteIcon";
-import FavoriteSvg from "@/utilities/svgIcons/FavoriteSvg";
-import ProfileIcon from "../icons/ecommerce/ProfileIcon";
-import CartIcon from "../icons/ecommerce/CartIcon";
+import LocationIcon from "@/components/icons/ecommerce/LocationIcon";
+import FavoriteIcon from "@/components/icons/other/FavoriteIcon";
+import ProfileIcon from "@/components/icons/ecommerce/ProfileIcon";
+import CartIcon from "@/components/icons/ecommerce/CartIcon";
+import MenuIcon from "@/components/icons/ecommerce/MenuIcon";
 import Link from "next/link";
-import MenuIcon from "../icons/ecommerce/MenuIcon";
 
 const Header = () => {
   return (

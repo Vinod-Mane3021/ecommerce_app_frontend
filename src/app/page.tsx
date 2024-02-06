@@ -4,7 +4,7 @@ import Header from "@/components/header/Header";
 import NavBar from "@/components/navBar/NavBar";
 import NavBarMobile from "@/components/navBarMobile/NavBarMobile";
 import HomePage from "./home/page";
-import ReduxCounter from "@/components/test/ReduxCounter";
+import ReduxCounter from "@/utilities/test/ReduxCounter";
 
 
 const page = () => {
@@ -17,7 +17,7 @@ const page = () => {
           </div>
         </div> */}
       <HomePage/>
-      
+      {/* <ReduxCounter/> */}
       {/* <NavBarMobile/> */}
 
      

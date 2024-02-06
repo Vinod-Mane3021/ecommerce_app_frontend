@@ -7,22 +7,14 @@ import ProductPricing from "@/components/checkout/ProductPricing";
 import SpacialOffer from "@/components/checkout/SpacialOffer";
 import { useAppSelector } from "@/store/hooks";
 import { roundValue } from "@/utilities/functions/roundValue";
-import { allSweatshirtProductTypes } from "@/utilities/types/allSweatshirtProductTypes";
-import React from "react";
+import { allSweatshirtProductTypes } from "@/types/productTypes";
+import React, { useState } from "react";
 
 const Checkout = () => {
-  const cartItems: allSweatshirtProductTypes[] = useAppSelector(
-    (state) => state.cart.cartItems
-  );
 
-  const totalCartItemPrice = cartItems.reduce(
-    (acc, item) => acc + item.price * item.customerCartQuantity,
-    0
-  );
-  const totalOriginalPrice = cartItems.reduce(
-    (acc, item) => acc + item.originalPrice * item.customerCartQuantity,
-    0
-  );
+  const cartItems: allSweatshirtProductTypes[] = useAppSelector(state => state.cart.cartItems);
+  const totalCartItemPrice = cartItems.reduce((acc, item) => acc + item.price * item.customerCartQuantity, 0);
+  const totalOriginalPrice = cartItems.reduce((acc, item) => acc + item.originalPrice * item.customerCartQuantity, 0);
 
   const TOTAL_ORIGINAL_PRICE = roundValue(totalOriginalPrice);
   const TOTAL_CART_ITEM_PRICE = roundValue(totalCartItemPrice);
@@ -34,6 +26,10 @@ const Checkout = () => {
   const handlePayment = () => {
     console.log("TOTAL_CART_ITEM_PRICE : ", TOTAL_CART_ITEM_PRICE)
     console.log("total cart items : ", cartItems)
+  }
+
+  const handleMenuToggle = () => {
+
   }
 
   return (

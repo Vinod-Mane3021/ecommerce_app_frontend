@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import CartIconSvg from "@/utilities/svgIcons/CartIconSvg";
+import CartIconSvg from "../../../../public/svgIcons/CartIconSvg";
 import { useAppSelector } from "@/store/hooks";
 import Link from "next/link";
 

@@ -1,4 +1,4 @@
-import { SectionsProps } from "@/utilities/types/navBarTypes";
+import { SectionsProps } from "@/types/navBarTypes";
 
 export const MenSection: SectionsProps[] = [
     {

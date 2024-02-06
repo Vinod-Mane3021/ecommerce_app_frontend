@@ -1,4 +1,4 @@
-import { ImageDataProps } from "@/utilities/types/navBarTypes";
+import { ImageDataProps } from "@/types/navBarTypes";
 import Link from "next/link";
 import React from "react";
 

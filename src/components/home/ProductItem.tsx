@@ -2,18 +2,18 @@
 import AddToCartButton from "@/components/buttons/AddToCartButton";
 import DiscountOfferBox from "@/components/home/DiscountOfferBox";
 import FilledFavoriteIcon from "@/components/icons/other/FilledFavoriteIcon";
-import FavoriteSvg from "@/utilities/svgIcons/FavoriteSvg";
-import { BestsellersProps } from "@/utilities/types/bestsellersTypes";
+import FavoriteSvg from "../../../public/svgIcons/FavoriteSvg";
+import { BestsellersProps } from "@/types/bestsellersTypes";
 import React, { useState } from "react";
 
 const ProductItem = ({
-  image,
-  name,
-  price,
-  originPrice,
-  discount,
-  colors,
-  totalQuantity,
+  productImage,
+  productName,
+  productPrice,
+  productOriginalPrice,
+  productDiscount,
+  productColorList,
+  productTotalQuantity,
 }: BestsellersProps) => {
   const [FavoriteAdded, setFavoriteAdded] = useState(false);
 
@@ -30,8 +30,8 @@ const ProductItem = ({
       <div className="relative">
         <img
           className="min-w-[200px] md:min-w-[230px] xl:min-w-[280px]"
-          src={image}
-          alt={name}
+          src={productImage}
+          alt={productName}
         />
         <div
           className="absolute top-2 right-2 md:top-5 md:right-5 hover:bg-gray-300 p-2 rounded-full duration-300"
@@ -43,28 +43,28 @@ const ProductItem = ({
       </div>
 
       <div className="px-2 py-2 flex flex-col h-full w-full justify-between">
-        <p className="text-xs md:text-sm lg:text-base">{name}</p>
+        <p className="text-xs md:text-sm lg:text-base">{productName}</p>
 
         <div className="flex flex-col gap-2">
           <div className="flex gap-2 items-center justify-between">
             <div className="flex gap-1 md:gap-2 items-center">
               <p className="text-green-800 text-xs md:text-sm lg:text-base font-bold">
-                ${price}
+                ${productPrice}
               </p>
               <p className="text-[10px] sm:text-xs md:text-sm lg:text-base line-through text-gray-600">
-                ${originPrice}.00
+                ${productOriginalPrice}.00
               </p>
-              <DiscountOfferBox discount={discount} />
+              <DiscountOfferBox discount={productDiscount} />
             </div>
             <div className="bg-gray-200 rounded-full p-1">
-              <p className="text-[10px] sm:text-xs md:text-xs lg:text-xs font-semibold">{totalQuantity}</p>
+              <p className="text-[10px] sm:text-xs md:text-xs lg:text-xs font-semibold">{productTotalQuantity}</p>
             </div>
           </div>
 
           <div className="flex gap-5 items-center justify-between">
             <span className="flex gap-2">
               <p className="text-xs md:text-sm lg:text-base">
-                colors : {colors}
+                colors : {productColorList[Math.random()*3].productColorName}
               </p>
             </span>
             <AddToCartButton handleAddToCart={handleAddToCart} />

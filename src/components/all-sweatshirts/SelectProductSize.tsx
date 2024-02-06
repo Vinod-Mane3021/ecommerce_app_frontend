@@ -1,6 +1,6 @@
 import React from "react";
-import ArrowRightIcon from "../icons/arrow/ArrowRightIcon";
-import Spacer from "../small/Spacer";
+import ArrowRightIcon from "@/components/icons/arrow/ArrowRightIcon";
+import Spacer from "@/utilities/small/Spacer";
 
 const SelectProductSize = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import ArrowRightIcon from "../icons/arrow/ArrowRightIcon";
+import ArrowRightIcon from "@/components/icons/arrow/ArrowRightIcon";
 
 interface Props {
   image: string;

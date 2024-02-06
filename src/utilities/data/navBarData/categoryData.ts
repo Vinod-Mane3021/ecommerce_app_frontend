@@ -1,4 +1,4 @@
-import { CategoryProps } from "../../types/navBarTypes";
+import { CategoryProps } from "../../../types/navBarTypes";
 import { kidsImages, menImages, newInImages, womenImages } from "./imageData";
 import { kidsSection } from "./sections/kids";
 import { MenSection } from "./sections/men";

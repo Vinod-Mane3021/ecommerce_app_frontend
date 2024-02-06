@@ -1,4 +1,4 @@
-import { ImageDataProps } from "../../types/navBarTypes";
+import { ImageDataProps } from "../../../types/navBarTypes";
 
 export const newInImages: ImageDataProps[] = [
     {

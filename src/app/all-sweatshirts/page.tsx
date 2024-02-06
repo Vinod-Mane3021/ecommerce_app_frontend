@@ -1,14 +1,14 @@
 'use client'
 import Footer from "@/components/footer/Footer";
 import ProductItem from "../../components/all-sweatshirts/ProductItem";
-import FilterIcon from "@/components/icons/ecommerce/FilterIcon";
 import { allSweatshirtsData } from "@/utilities/data/productsCategory/all-sweatshirts";
 import Link from "next/link";
 import React from "react";
 import { preload } from "react-dom";
 import { stringify } from "postcss";
 import { usePathname } from "next/navigation";
-import { allSweatshirtProductTypes } from "@/utilities/types/allSweatshirtProductTypes";
+import { allSweatshirtProductTypes } from "@/types/productTypes";
+import FilterIcon from "@/components/icons/ecommerce/FilterIcon";
 
 const allSweatshirts = () => {
 
@@ -54,9 +54,7 @@ const allSweatshirts = () => {
                 price={Item.price}
                 originalPrice={Item.originalPrice}
                 discount={Item.discount}
-                colors={Item.colors}
                 quantity={Item.quantity}
-                customerCartQuantity={Item.customerCartQuantity}
                 />
               </Link>
         )})}

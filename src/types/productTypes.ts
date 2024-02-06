@@ -1,3 +1,5 @@
+import { productColorList } from "./bestsellersTypes";
+
 export interface allSweatshirtProductTypes {
   id: number;
   title: string;
@@ -5,11 +7,9 @@ export interface allSweatshirtProductTypes {
   price: number;
   originalPrice: number;
   discount: number;
-  colors: ColorsProps[];
   quantity: number;
-  customerCartQuantity: number
 }
 
-export interface ColorsProps {
-  name: string;
+export interface products {
+  
 }

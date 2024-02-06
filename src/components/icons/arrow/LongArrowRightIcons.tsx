@@ -1,5 +1,5 @@
 'use client'
-import { IconProps } from "@/utilities/types/IconType";
+import { IconProps } from "@/types/IconType";
 
 interface Props {
     heightWidth: string
