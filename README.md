@@ -1,6 +1,9 @@
 # ecommerce_app_backend - FrontEnd
 ## Visit to Ecommerce webite - <u>[YouTube](https://youtu.be/nlc77FvlsPI)</u>
 
+![IMG_20240428_211752](https://github.com/Vinod-Mane3021/ecommerce_app_frontend/assets/92261457/0c4565c8-5da4-4bf8-9652-f021105f8338)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
