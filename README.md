@@ -44,3 +44,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - [React Query](https://www.typescriptlang.org/) – A library for managing, caching, and updating server state in React applications.
 
 - [Axios](https://www.typescriptlang.org/) – A promise-based HTTP client for the browser and Node.js.
+
+
+## Checkout backend project:
+- https://github.com/Vinod-Mane3021/ecommerce_app_backend
